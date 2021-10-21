@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Topbar from './components/Topbar';
+import logo from './resources/logo.png';
+import Middlebar from './components/Middlebar';
+import Introbar from './components/Introbar';
+import Skillbar from './components/Skillbar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <Topbar />
+      <header className="App-header" style={{ fontWeight: 'bold' }}>
+        Developer | Lifetime Learner | Reasearcher{' '}
+        <p style={{ fontSize: '20px', fontWeight: 'normal' }}>
+          {' '}
+          Working towards sustainable technology{' '}
+        </p>{' '}
+        <img src={logo}></img>
       </header>
-    </div>
+      <Middlebar />
+      <Introbar />
+      <Skillbar />
+    </>
   );
 }
 
