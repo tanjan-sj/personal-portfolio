@@ -10,7 +10,7 @@ function App() {
     <>
       <Topbar />
       <header className="App-header" style={{ fontWeight: 'bold' }}>
-        Developer | Lifetime Learner | Reasearcher{' '}
+        Developer | Lifelong Learner | Reasearcher{' '}
         <p style={{ fontSize: '20px', fontWeight: 'normal' }}>
           {' '}
           Working towards sustainable technology{' '}

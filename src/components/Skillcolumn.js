@@ -1,5 +1,4 @@
 import React from 'react';
-import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -10,24 +9,45 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
 
-const Skillcolumn = ({ title, about, icon }) => {
+import PrimaryTitle from '../utils/PrimaryTitle';
+import About from '../utils/About';
+import Listbutton from '../utils/Listbutton';
+import TechItem from '../utils/TechItem';
+import ResearchItem from '../utils/ResearchItem';
+
+const Skillcolumn = ({ title, about, icon, seeTheList, items, isResearch }) => {
   const [open, setOpen] = React.useState(true);
 
   const handleClick = () => {
     setOpen(!open);
   };
+
+  var rows = [];
+  for (var i = 0; i < items.length; i++) {
+    // note: we are adding a key prop here to allow react to uniquely identify each
+    // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
+    console.log('item: ', items[i]);
+    if (isResearch) {
+      rows.push(
+        <ResearchItem
+          key={i}
+          researchName={items[i].research}
+          researchLink={items[i].link}
+        />
+      );
+    } else {
+      rows.push(<TechItem key={i} techName={items[i]} />);
+    }
+  }
+  // console.log('rows: ', rows);
   return (
     <Card
       sx={{
         minWidth: '50%',
         minHeight: '100%',
+        // border: '2px solid limegreen',
+        borderRadius: '25px',
       }}
     >
       <CardContent>
@@ -43,25 +63,9 @@ const Skillcolumn = ({ title, about, icon }) => {
             }}
           />
         </span>
-        <Typography
-          sx={{
-            fontSize: 25,
-            textAlign: 'center',
-            fontWeight: 'bold',
-            marginBottom: '20px',
-          }}
-          color="DarkSlateGrey"
-          gutterBottom
-        >
-          {title}
-        </Typography>
 
-        <Typography
-          sx={{ textAlign: 'center', marginBottom: '40px' }}
-          color="text.secondary"
-        >
-          {about}
-        </Typography>
+        <PrimaryTitle title={title} />
+        <About about={about} />
 
         <List
           sx={{
@@ -72,67 +76,14 @@ const Skillcolumn = ({ title, about, icon }) => {
           component="nav"
           aria-labelledby="nested-list-subheader"
         >
-          <ListItemButton onClick={handleClick}>
-            <ListItemText
-              disableTypography
-              primary={
-                <Typography
-                  sx={{
-                    fontSize: '20px',
-                    textAlign: 'center',
-                    color: 'limegreen',
-                  }}
-                >
-                  {'Technologies:'}
-                </Typography>
-              }
-            />
-            {open ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
+          <Listbutton
+            open={open}
+            title={seeTheList}
+            handleClick={handleClick}
+          />
           <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItemText
-                disableTypography
-                primary={
-                  <Typography
-                    sx={{
-                      fontSize: '18px',
-                      textAlign: 'center',
-                      color: 'DarkSlateGrey',
-                    }}
-                  >
-                    {'Spring Boot'}
-                  </Typography>
-                }
-              />
-              <ListItemText
-                disableTypography
-                primary={
-                  <Typography
-                    sx={{
-                      fontSize: '18px',
-                      textAlign: 'center',
-                      color: 'DarkSlateGrey',
-                    }}
-                  >
-                    {'Node.Js'}
-                  </Typography>
-                }
-              />
-              <ListItemText
-                disableTypography
-                primary={
-                  <Typography
-                    sx={{
-                      fontSize: '18px',
-                      textAlign: 'center',
-                      color: 'DarkSlateGrey',
-                    }}
-                  >
-                    {'Java'}
-                  </Typography>
-                }
-              />
+              {rows}
             </List>
           </Collapse>
         </List>

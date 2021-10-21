@@ -36,19 +36,19 @@ export const Topbar = () => {
               window.open('https://www.linkedin.com/in/umme-sumaya-jannat/')
             }
           >
-            <FontAwesomeIcon icon={faLinkedin} size="2x" color="lime" />
+            <FontAwesomeIcon icon={faLinkedin} size="2x" color="limegreen" />
           </IconButton>
           <IconButton
             aria-label="Github.com"
             onClick={() => window.open('https://github.com/tanjan-sj')}
           >
-            <FontAwesomeIcon icon={faGithub} size="2x" color="lime" />
+            <FontAwesomeIcon icon={faGithub} size="2x" color="limegreen" />
           </IconButton>
           <IconButton
             aria-label="Gitlab.com"
             onClick={() => window.open('https://gitlab.com/tanjan.sj')}
           >
-            <FontAwesomeIcon icon={faGitlab} size="2x" color="lime" />
+            <FontAwesomeIcon icon={faGitlab} size="2x" color="limegreen" />
           </IconButton>
           <IconButton
             aria-label="Researchgate.com"
@@ -56,7 +56,7 @@ export const Topbar = () => {
               window.open('https://www.researchgate.net/profile/Umme-Jannat')
             }
           >
-            <FontAwesomeIcon icon={faResearchgate} size="2x" color="lime" />
+            <FontAwesomeIcon icon={faResearchgate} size="2x" color="limegreen" />
           </IconButton>
         </Stack>
         {/* <Toolbar>
