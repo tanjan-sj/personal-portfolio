@@ -4,8 +4,12 @@ import Typography from '@mui/material/Typography';
 import { ListItemButton } from '@mui/material';
 
 const ResearchItem = ({ researchName, researchLink }) => {
+  console.log('researchLink: ', researchLink);
   return (
-    <ListItemButton onClick={() => window.open({ researchLink })}>
+    <ListItemButton
+      style={{ padding: '24px' }}
+      onClick={() => window.open(researchLink)}
+    >
       <ListItemText
         disableTypography
         primary={

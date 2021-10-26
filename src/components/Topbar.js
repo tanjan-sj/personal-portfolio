@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import IconButton from '@mui/material/IconButton';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faResearchgate,
   faGithub,
   faGitlab,
   faLinkedin,
+  faGoodreads,
 } from '@fortawesome/free-brands-svg-icons';
 
 //#292C34
@@ -56,16 +51,23 @@ export const Topbar = () => {
               window.open('https://www.researchgate.net/profile/Umme-Jannat')
             }
           >
-            <FontAwesomeIcon icon={faResearchgate} size="2x" color="limegreen" />
+            <FontAwesomeIcon
+              icon={faResearchgate}
+              size="2x"
+              color="limegreen"
+            />
+          </IconButton>
+          <IconButton
+            aria-label="Goodreads.com"
+            onClick={() =>
+              window.open(
+                'https://www.goodreads.com/user/show/40008219-umme-sumaya-jannat'
+              )
+            }
+          >
+            <FontAwesomeIcon icon={faGoodreads} size="2x" color="limegreen" />
           </IconButton>
         </Stack>
-        {/* <Toolbar>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1 }}
-          ></Typography>
-        </Toolbar> */}
       </AppBar>
     </Box>
   );

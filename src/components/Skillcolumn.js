@@ -1,15 +1,9 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-
 import PrimaryTitle from '../utils/PrimaryTitle';
 import About from '../utils/About';
 import Listbutton from '../utils/Listbutton';
@@ -25,9 +19,6 @@ const Skillcolumn = ({ title, about, icon, seeTheList, items, isResearch }) => {
 
   var rows = [];
   for (var i = 0; i < items.length; i++) {
-    // note: we are adding a key prop here to allow react to uniquely identify each
-    // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-    console.log('item: ', items[i]);
     if (isResearch) {
       rows.push(
         <ResearchItem
@@ -40,14 +31,13 @@ const Skillcolumn = ({ title, about, icon, seeTheList, items, isResearch }) => {
       rows.push(<TechItem key={i} techName={items[i]} />);
     }
   }
-  // console.log('rows: ', rows);
   return (
     <Card
       sx={{
         minWidth: '50%',
-        minHeight: '100%',
-        // border: '2px solid limegreen',
-        borderRadius: '25px',
+        borderRadius: '5px',
+        border: '0.5px solid lime',
+        boxShadow: 5,
       }}
     >
       <CardContent>

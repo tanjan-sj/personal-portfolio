@@ -40,7 +40,7 @@
 .App-skill {
   background-color: snow;
   /* min-height: 100vh; */
-  height: 700px;
+  height: auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -48,6 +48,7 @@
   justify-content: center;
   font-size: calc(30px + 2vmin);
   color: limegreen;
+  margin-top: 20px;
 }
 
 .App-middle {
@@ -78,6 +79,20 @@
   padding-top: 0%;
 }
 
+.App-works {
+  background-color: snow;
+  /* min-height: 100vh; */
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 2vmin);
+  color: limegreen;
+  padding-top: 150px;
+  /* margin-top: 100px; */
+}
 .box {
   background-color: aqua;
   border-radius: 6px;
