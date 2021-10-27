@@ -40,12 +40,12 @@ const Projectcard = ({ img, title, summary, repo, researchGate, youtube }) => {
             gutterBottom
             variant="h5"
             component="div"
-            color="DarkSlateGrey"
+            color="#40a829"
             sx={{ fontWeight: 'normal' }}
           >
             {title}
           </Typography>
-          <Typography variant="body2" color="Gray">
+          <Typography variant="body2" color="#6F6767">
             {summary}
           </Typography>
         </CardContent>
@@ -54,7 +54,7 @@ const Projectcard = ({ img, title, summary, repo, researchGate, youtube }) => {
             <FontAwesomeIcon
               icon={faGithub}
               size="20px"
-              color="DarkSlateGray"
+              color="#6F6767"
             />
             <Button size="small" onClick={() => window.open(repo)}>
               Github{' '}
@@ -65,7 +65,7 @@ const Projectcard = ({ img, title, summary, repo, researchGate, youtube }) => {
               <FontAwesomeIcon
                 icon={faResearchgate}
                 size="20px"
-                color="DarkSlateGray"
+                color="#6F6767"
               />
               <Button size="small" onClick={() => window.open(researchGate)}>
                 ResearchGate{' '}
@@ -80,7 +80,7 @@ const Projectcard = ({ img, title, summary, repo, researchGate, youtube }) => {
               <FontAwesomeIcon
                 icon={faYoutube}
                 size="20px"
-                color="DarkSlateGray"
+                color="#6F6767"
               />
               <Button size="small" onClick={() => window.open(youtube)}>
                 Youtube{' '}

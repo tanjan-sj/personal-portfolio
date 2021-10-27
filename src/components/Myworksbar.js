@@ -6,20 +6,22 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import Projectcard from '../utils/Projectcard';
+import Projectcard from './utils/Projectcard';
+import MoreButton from './utils/MoreButton';
 import RoboSUSTdemo from '../resources/RoboSUSTdemo.png';
 import androidMalware from '../resources/androidMalware.png';
 import newspapers from '../resources/newspapers.jpg';
 import mazesolver from '../resources/mazesolver.png';
 import sumobot from '../resources/sumobot.png';
 import todoList from '../resources/todoList.png';
-import Button from '@mui/material/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { properties } from '../properties.js';
+
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Divider from '@mui/material/Divider';
 
 const Myworksbar = () => {
   return (
-    <div className="App-works">
+    <div className="App-works" id="workBar">
       <Typography
         variant="h4"
         sx={{
@@ -28,7 +30,7 @@ const Myworksbar = () => {
           marginBottom: '20px',
           fontFamily: 'roboto',
         }}
-        color="DarkSlateGrey"
+        color="#40a829"
         gutterBottom
       >
         My Works
@@ -41,94 +43,63 @@ const Myworksbar = () => {
           fontSize: '20px',
           marginBottom: '100px',
         }}
-        color="DimGray"
+        color="limegreen"
         gutterBottom
       >
-        Showcasing a few of my works
+        Showcasing a few of my works!
       </Typography>
 
       <Box sx={{ width: '70%', flexGrow: 1 }}>
         <Grid container rowSpacing={5} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Projectcard
             img={RoboSUSTdemo}
-            title={'RoboSUST demo'}
-            summary={
-              'A demo website for a research-based robotics organization, RoboSUST.'
-            }
-            repo={'https://github.com/tanjan-sj/RoboSUST-demo'}
+            title={properties.workTitle1}
+            summary={properties.workSummary1}
+            repo={properties.workRepo1}
           />
           <Projectcard
             img={androidMalware}
-            title={'Android Malware Analysis'}
-            summary={
-              'This is a part of the study for an arificial intelligent project - Analysis and Detection of Malware in Android Applications Using Machine Learning.'
-            }
-            repo={'https://github.com/tanjan-sj/Android-Malware-Analysis'}
-            researchGate={
-              'https://www.researchgate.net/publication/330738809_Analysis_and_Detection_of_Malware_in_Android_Applications_Using_Machine_Learning'
-            }
+            title={properties.workTitle2}
+            summary={properties.workSummary2}
+            repo={properties.workRepo2}
+            researchGate={properties.researchArray[1].link}
           />
           <Projectcard
             img={newspapers}
-            title={'Bengali News Paper Article Crawler'}
-            summary={
-              'A small scale crawler for scraping Bengali news article from a few select website.'
-            }
-            repo={'https://github.com/tanjan-sj/bengali-news-article-crawler'}
+            title={properties.workTitle3}
+            summary={properties.workSummary3}
+            repo={properties.workRepo3}
           />
           <Projectcard
             img={mazesolver}
-            title={'Maze Solver Robot'}
-            summary={
-              'Built this robot for International Autonomous Robotics Contest (Bangladesh Round). My team was the national 1st Runners Up.'
-            }
-            repo={'https://github.com/tanjan-sj/maze-solver-robot'}
-            youtube={'https://www.youtube.com/watch?v=uKpRkR70YtQ'}
+            title={properties.workTitle4}
+            summary={properties.workSummary4}
+            repo={properties.workRepo4}
+            youtube={properties.mazeYoutube}
           />
           <Projectcard
             img={sumobot}
-            title={'Sumo Robot'}
-            summary={
-              'Built this robot for the first ever Sumo Robot competition in Bangladesh. My team was the national champion.'
-            }
-            repo={'https://github.com/tanjan-sj/sumo-bot'}
-            youtube={'https://www.youtube.com/watch?v=chLhbB3obhc'}
+            title={properties.workTitle5}
+            summary={properties.workSummary5}
+            repo={properties.workRepo5}
+            youtube={properties.sumoYoutube}
           />
           <Projectcard
             img={todoList}
-            title={'A simple Todo list project'}
-            summary={`It's a simplisting to-do list project made with React.js and a backend json server.`}
-            repo={'https://github.com/tanjan-sj/todo-list'}
+            title={properties.workTitle6}
+            summary={properties.workSummary6}
+            repo={properties.workRepo6}
           />
         </Grid>
       </Box>
 
-      <span style={{ marginLeft: '10px' }}>
-        <Button
-          variant="outlined"
-          sx={{
-            margin: '80px',
-            fontSize: '17px',
-            borderRadius: '10px',
-            color: 'lime',
-            border: '1px solid lime',
-            boxShadow: 3,
-          }}
-          onClick={() =>
-            window.open('https://github.com/tanjan-sj?tab=repositories')
-          }
-        >
-          <FontAwesomeIcon
-            icon={faGithub}
-            size="20px"
-            color="limegreen"
-            style={{
-              marginRight: '10px',
-            }}
-          />
-          See more on Github!
-        </Button>
-      </span>
+      <MoreButton
+        link={properties.gitRepoLink}
+        title={'See more on Github!'}
+        icon={faGithub}
+      />
+
+      <Divider className="divider" />
     </div>
   );
 };

@@ -1,20 +1,12 @@
-// import React from 'react';
-// import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
-// import { orange, lime, purple, snow } from '@mui/material/colors';
+import { createTheme } from '@mui/material/styles';
+import { green, orange, lime } from '@mui/material/colors';
 
-// const Theme = createTheme({
-//   palette: {
-//     text: {
-//       primary: orange[500],
-//       secondary: orange[500],
-//     },
-//     action: {
-//       active: lime[500],
-//     },
-//     success: {
-//       dark: purple[500],
-//     },
-//   },
-// });
+const Theme = createTheme({
+  palette: {
+    primary: {
+      main: '#6F6767',
+    },
+  },
+});
 
-// export default Theme;
+export default Theme;

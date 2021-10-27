@@ -10,7 +10,7 @@ const PrimaryTitle = ({ title }) => {
         fontWeight: 'bold',
         marginBottom: '20px',
       }}
-      color="DarkSlateGrey"
+      color="#40a829"
       gutterBottom
     >
       {title}

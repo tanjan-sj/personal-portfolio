@@ -4,11 +4,11 @@ import CardContent from '@mui/material/CardContent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import List from '@mui/material/List';
 import Collapse from '@mui/material/Collapse';
-import PrimaryTitle from '../utils/PrimaryTitle';
-import About from '../utils/About';
-import Listbutton from '../utils/Listbutton';
-import TechItem from '../utils/TechItem';
-import ResearchItem from '../utils/ResearchItem';
+import PrimaryTitle from './utils/PrimaryTitle';
+import About from './utils/About';
+import Listbutton from './utils/Listbutton';
+import TechItem from './utils/TechItem';
+import ResearchItem from './utils/ResearchItem';
 
 const Skillcolumn = ({ title, about, icon, seeTheList, items, isResearch }) => {
   const [open, setOpen] = React.useState(true);

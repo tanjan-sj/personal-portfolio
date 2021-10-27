@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
 import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Divider from '@mui/material/Divider';
 import {
   faResearchgate,
   faGithub,
@@ -12,62 +12,62 @@ import {
   faGoodreads,
 } from '@fortawesome/free-brands-svg-icons';
 
-//#292C34
+import ProfileButton from './utils/ProfileButton';
+import TabButton from './utils/TabButton';
+import { properties } from '../properties.js';
+
 export const Topbar = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box color="primary" sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
         style={{
           background: 'snow',
           height: '100px',
-          // border: '3px solid lime',
         }}
       >
-        <Stack spacing={3} direction="row" padding="20px">
-          <IconButton
-            aria-label="Linkedin.com"
-            onClick={() =>
-              window.open('https://www.linkedin.com/in/umme-sumaya-jannat/')
-            }
+        <Toolbar>
+          <Stack
+            spacing={3}
+            direction="row"
+            padding="20px"
+            justify="space-between"
           >
-            <FontAwesomeIcon icon={faLinkedin} size="2x" color="limegreen" />
-          </IconButton>
-          <IconButton
-            aria-label="Github.com"
-            onClick={() => window.open('https://github.com/tanjan-sj')}
-          >
-            <FontAwesomeIcon icon={faGithub} size="2x" color="limegreen" />
-          </IconButton>
-          <IconButton
-            aria-label="Gitlab.com"
-            onClick={() => window.open('https://gitlab.com/tanjan.sj')}
-          >
-            <FontAwesomeIcon icon={faGitlab} size="2x" color="limegreen" />
-          </IconButton>
-          <IconButton
-            aria-label="Researchgate.com"
-            onClick={() =>
-              window.open('https://www.researchgate.net/profile/Umme-Jannat')
-            }
-          >
-            <FontAwesomeIcon
-              icon={faResearchgate}
-              size="2x"
-              color="limegreen"
+            <ProfileButton
+              label={'Linkedin.com'}
+              link={properties.linkedinLink}
+              icon={faLinkedin}
             />
-          </IconButton>
-          <IconButton
-            aria-label="Goodreads.com"
-            onClick={() =>
-              window.open(
-                'https://www.goodreads.com/user/show/40008219-umme-sumaya-jannat'
-              )
-            }
-          >
-            <FontAwesomeIcon icon={faGoodreads} size="2x" color="limegreen" />
-          </IconButton>
-        </Stack>
+            <ProfileButton
+              label={'Github.com'}
+              link={properties.githubLink}
+              icon={faGithub}
+            />
+            <ProfileButton
+              label={'Gitlab.com'}
+              link={properties.gitlabLink}
+              icon={faGitlab}
+            />
+            <ProfileButton
+              label={'Researchgate.com'}
+              link={properties.researchgateLink}
+              icon={faResearchgate}
+            />
+            <ProfileButton
+              label={'Goodreads.com'}
+              link={properties.goodreadsLink}
+              icon={faGoodreads}
+            />
+          </Stack>
+
+          <Divider className="divider-top" />
+
+          <TabButton id={'introBar'} tag={'About Me'} />
+          <TabButton id={'skillBar'} tag={'Skill'} />
+          <TabButton id={'workBar'} tag={'Works'} />
+          <TabButton id={'experienceBar'} tag={'Experience'} />
+          <TabButton id={'contactBar'} tag={'Contact me'} />
+        </Toolbar>
       </AppBar>
     </Box>
   );
