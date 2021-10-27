@@ -12,7 +12,7 @@ const MoreButton = ({ link, title, icon }) => {
           marginBottom: '150px',
           fontSize: '17px',
           borderRadius: '10px',
-          color: 'lime',
+          color: '#40a829',
           border: '1px solid lime',
           boxShadow: 3,
         }}

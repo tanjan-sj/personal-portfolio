@@ -25,12 +25,24 @@ const Contactme = () => {
           textAlign: 'center',
           fontWeight: 'normal',
           fontSize: '20px',
-          marginBottom: '100px',
+          marginBottom: '70px',
         }}
         color="snow"
         gutterBottom
       >
         {properties.mailId}
+      </Typography>
+      <Typography
+        sx={{
+          textAlign: 'center',
+          fontWeight: 'normal',
+          fontSize: '15px',
+          marginBottom: '100px',
+        }}
+        color="snow"
+        gutterBottom
+      >
+        Third party logos are registered trademark of the respective companies.
       </Typography>
     </div>
   );
