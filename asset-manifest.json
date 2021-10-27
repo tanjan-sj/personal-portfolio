@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/personal-portfolio/static/css/main.a0008a56.chunk.css",
+    "main.js": "/personal-portfolio/static/js/main.669ee9ab.chunk.js",
+    "main.js.map": "/personal-portfolio/static/js/main.669ee9ab.chunk.js.map",
+    "runtime-main.js": "/personal-portfolio/static/js/runtime-main.fd11a133.js",
+    "runtime-main.js.map": "/personal-portfolio/static/js/runtime-main.fd11a133.js.map",
+    "static/css/2.70b11bb0.chunk.css": "/personal-portfolio/static/css/2.70b11bb0.chunk.css",
+    "static/js/2.444ecab0.chunk.js": "/personal-portfolio/static/js/2.444ecab0.chunk.js",
+    "static/js/2.444ecab0.chunk.js.map": "/personal-portfolio/static/js/2.444ecab0.chunk.js.map",
+    "index.html": "/personal-portfolio/index.html",
+    "static/css/2.70b11bb0.chunk.css.map": "/personal-portfolio/static/css/2.70b11bb0.chunk.css.map",
+    "static/css/main.a0008a56.chunk.css.map": "/personal-portfolio/static/css/main.a0008a56.chunk.css.map",
+    "static/js/2.444ecab0.chunk.js.LICENSE.txt": "/personal-portfolio/static/js/2.444ecab0.chunk.js.LICENSE.txt",
+    "static/media/RoboSUSTdemo.59afb235.png": "/personal-portfolio/static/media/RoboSUSTdemo.59afb235.png",
+    "static/media/androidMalware.874c03dc.png": "/personal-portfolio/static/media/androidMalware.874c03dc.png",
+    "static/media/hero.d74db202.svg": "/personal-portfolio/static/media/hero.d74db202.svg",
+    "static/media/logo.3aa47804.png": "/personal-portfolio/static/media/logo.3aa47804.png",
+    "static/media/mazesolver.554f5150.png": "/personal-portfolio/static/media/mazesolver.554f5150.png",
+    "static/media/newspapers.e352fe5a.jpg": "/personal-portfolio/static/media/newspapers.e352fe5a.jpg",
+    "static/media/300.css": "/personal-portfolio/static/media/roboto-vietnamese-300-normal.af9afdc1.woff2",
+    "static/media/400.css": "/personal-portfolio/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
+    "static/media/500.css": "/personal-portfolio/static/media/roboto-vietnamese-500-normal.b8e494da.woff2",
+    "static/media/700.css": "/personal-portfolio/static/media/roboto-vietnamese-700-normal.3096f18a.woff2",
+    "static/media/rsz_bkash.b6c95314.png": "/personal-portfolio/static/media/rsz_bkash.b6c95314.png",
+    "static/media/rsz_dsi.413c56a5.png": "/personal-portfolio/static/media/rsz_dsi.413c56a5.png",
+    "static/media/sumobot.853cdff4.png": "/personal-portfolio/static/media/sumobot.853cdff4.png",
+    "static/media/todoList.1b793016.png": "/personal-portfolio/static/media/todoList.1b793016.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd11a133.js",
+    "static/css/2.70b11bb0.chunk.css",
+    "static/js/2.444ecab0.chunk.js",
+    "static/css/main.a0008a56.chunk.css",
+    "static/js/main.669ee9ab.chunk.js"
+  ]
+}
