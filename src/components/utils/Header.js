@@ -1,11 +1,20 @@
 import React from 'react';
 import logo from '../../resources/logo.png';
+import network from '../../resources/network.png';
+
 import { properties } from '../../properties.js';
+import Box from '@mui/material/Box';
 
 const Header = () => {
   return (
-    <header className="App-header" style={{ fontWeight: 'bold' }}>
-      {/* Developer | Reader | Researcher{' '} */}
+    <Box
+      className="App-header"
+      sx={{
+        fontWeight: 'bold',
+        backgroundColor: 'primary.main',
+        color: 'secondary.main',
+      }}
+    >
       {properties.title1} {' | '} {properties.title2} {' | '}{' '}
       {properties.title3}
       <p style={{ fontSize: '20px', fontWeight: 'normal' }}>
@@ -13,11 +22,11 @@ const Header = () => {
         {properties.subheader}{' '}
       </p>{' '}
       <img
-        src={logo}
+        src={network}
         alt="Avatar"
-        style={{ borderRadius: '50%', width: '200px' }}
+        style={{ borderRadius: '50%', width: '250px' }}
       ></img>
-    </header>
+    </Box>
   );
 };
 

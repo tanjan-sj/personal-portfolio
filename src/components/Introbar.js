@@ -1,9 +1,14 @@
 import React from 'react';
 import { properties } from '../properties.js';
+import Box from '@mui/material/Box';
 
 const Introbar = () => {
   return (
-    <div className="App-intro" id="introBar">
+    <Box
+      className="App-intro"
+      id="introBar"
+      sx={{ backgroundColor: 'secondary.lighter', color: 'primary.lighter' }}
+    >
       <h5 style={{ fontWeight: 'bold', marginBottom: '20px' }}>
         {properties.intro}
       </h5>
@@ -19,7 +24,7 @@ const Introbar = () => {
         interest in research comes from. */}
         {properties.introParagraph}
       </p>
-    </div>
+    </Box>
   );
 };
 

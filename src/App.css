@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Qahiri&display=swap');
 .App {
   text-align: center;
 }
@@ -13,20 +14,7 @@
   }
 }
 
-/* .App-header {
-  background-color: snow;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: limegreen;
-} */
-
 .App-header {
-  background-color: snow;
-  /* min-height: 100vh; */
   height: 500px;
   overflow: hidden;
   display: flex;
@@ -34,12 +22,9 @@
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 2vmin);
-  color: limegreen;
 }
 
 .App-skill {
-  background-color: snow;
-  /* min-height: 100vh; */
   height: auto;
   overflow: hidden;
   display: flex;
@@ -47,12 +32,9 @@
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 2vmin);
-  color: limegreen;
-  margin-top: 20px;
 }
 
 .App-middle {
-  background-color: snow;
   height: 300px;
   overflow: hidden;
   display: flex;
@@ -60,8 +42,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 2vmin);
-  color: limegreen;
-  /* margin-bottom: 0%; */
   padding-bottom: 0%;
   margin-bottom: -35px;
 }
@@ -80,8 +60,6 @@
 }
 
 .App-works {
-  background-color: snow;
-  /* min-height: 100vh; */
   height: auto;
   overflow: hidden;
   display: flex;
@@ -91,12 +69,9 @@
   font-size: calc(30px + 2vmin);
   color: limegreen;
   padding-top: 150px;
-  /* margin-top: 100px; */
 }
 
 .App-resume {
-  background-color: snow;
-  /* min-height: 100vh; */
   height: auto;
   overflow: hidden;
   display: flex;
@@ -106,7 +81,6 @@
   font-size: calc(30px + 2vmin);
   color: limegreen;
   padding-top: 150px;
-  /* margin-top: 100px; */
 }
 
 .App-contact {
@@ -126,7 +100,6 @@
 .divider-top {
   width: 100%;
   max-width: 920px;
-  background-color: limegreen;
   font-size: 0.5px;
   display: hidden;
   box-shadow: 0;
@@ -134,7 +107,6 @@
 
 .divider {
   width: 100%;
-  background-color: white;
   font-size: 0.5px;
   box-shadow: 2;
 }

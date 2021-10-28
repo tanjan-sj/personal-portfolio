@@ -22,10 +22,10 @@ const Projectcard = ({ img, title, summary, repo, researchGate, youtube }) => {
         sx={{
           maxWidth: '90%',
           borderRadius: '25px',
-          border: '1px solid lime',
+          border: '1px solid secondary',
           boxShadow: 3,
           height: '400px',
-          backgroundColor: 'snow',
+          backgroundColor: 'secondary.lighter',
         }}
       >
         <CardMedia
@@ -40,33 +40,32 @@ const Projectcard = ({ img, title, summary, repo, researchGate, youtube }) => {
             gutterBottom
             variant="h5"
             component="div"
-            color="#40a829"
+            color="primary.lighter"
             sx={{ fontWeight: 'normal' }}
           >
             {title}
           </Typography>
-          <Typography variant="body2" color="#6F6767">
+          <Typography variant="body2" color="primary.lighter">
             {summary}
           </Typography>
         </CardContent>
         <CardActions>
           <span style={{ marginLeft: '10px' }}>
-            <FontAwesomeIcon
-              icon={faGithub}
-              size="20px"
-              color="#6F6767"
-            />
+            <IconButton sx={{ color: 'primary.lighter', fontSize: '35px' }}>
+              <FontAwesomeIcon icon={faGithub} color="primary.lighter" />
+            </IconButton>
             <Button size="small" onClick={() => window.open(repo)}>
               Github{' '}
             </Button>
           </span>
           {researchGate ? (
             <span style={{ marginLeft: '10px' }}>
-              <FontAwesomeIcon
-                icon={faResearchgate}
-                size="20px"
-                color="#6F6767"
-              />
+              <IconButton sx={{ color: 'primary.lighter', fontSize: '35px' }}>
+                <FontAwesomeIcon
+                  icon={faResearchgate}
+                  color="primary.lighter"
+                />
+              </IconButton>
               <Button size="small" onClick={() => window.open(researchGate)}>
                 ResearchGate{' '}
               </Button>
@@ -77,11 +76,9 @@ const Projectcard = ({ img, title, summary, repo, researchGate, youtube }) => {
 
           {youtube ? (
             <span style={{ marginLeft: '10px' }}>
-              <FontAwesomeIcon
-                icon={faYoutube}
-                size="20px"
-                color="#6F6767"
-              />
+              <IconButton sx={{ color: 'primary.lighter', fontSize: '35px' }}>
+                <FontAwesomeIcon icon={faYoutube} color="primary.lighter" />
+              </IconButton>
               <Button size="small" onClick={() => window.open(youtube)}>
                 Youtube{' '}
               </Button>

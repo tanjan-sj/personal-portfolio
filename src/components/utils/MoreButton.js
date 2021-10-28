@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+//color: '#40a829',
 const MoreButton = ({ link, title, icon }) => {
   return (
     <span style={{ marginLeft: '10px' }}>
@@ -12,8 +13,9 @@ const MoreButton = ({ link, title, icon }) => {
           marginBottom: '150px',
           fontSize: '17px',
           borderRadius: '10px',
-          color: '#40a829',
-          border: '1px solid lime',
+          color: 'secondary.lighter',
+          border: '1px solid secondary',
+          backgroundColor: 'primary.main',
           boxShadow: 3,
         }}
         onClick={() => window.open(link)}
@@ -22,7 +24,7 @@ const MoreButton = ({ link, title, icon }) => {
           <FontAwesomeIcon
             icon={icon}
             size="20px"
-            color="limegreen"
+            color="secondary"
             style={{
               marginRight: '10px',
             }}

@@ -4,8 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ProfileButton = ({ label, link, icon }) => {
   return (
-    <IconButton aria-label={label} onClick={() => window.open(link)}>
-      <FontAwesomeIcon icon={icon} size="2x" color="limegreen" />
+    <IconButton
+      aria-label={label}
+      onClick={() => window.open(link)}
+      color="secondary"
+    >
+      <FontAwesomeIcon icon={icon} size="2x" />
     </IconButton>
   );
 };

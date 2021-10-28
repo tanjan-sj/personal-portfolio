@@ -21,7 +21,11 @@ import Divider from '@mui/material/Divider';
 
 const Myworksbar = () => {
   return (
-    <div className="App-works" id="workBar">
+    <Box
+      className="App-works"
+      id="workBar"
+      sx={{ backgroundColor: 'primary.main' }}
+    >
       <Typography
         variant="h4"
         sx={{
@@ -30,7 +34,7 @@ const Myworksbar = () => {
           marginBottom: '20px',
           fontFamily: 'roboto',
         }}
-        color="#40a829"
+        color="secondary"
         gutterBottom
       >
         My Works
@@ -43,7 +47,7 @@ const Myworksbar = () => {
           fontSize: '20px',
           marginBottom: '100px',
         }}
-        color="limegreen"
+        color="secondary"
         gutterBottom
       >
         Showcasing a few of my works!
@@ -99,8 +103,8 @@ const Myworksbar = () => {
         icon={faGithub}
       />
 
-      <Divider className="divider" />
-    </div>
+      <Divider />
+    </Box>
   );
 };
 

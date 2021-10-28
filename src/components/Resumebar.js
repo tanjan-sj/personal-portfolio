@@ -7,10 +7,15 @@ import Stack from '@mui/material/Stack';
 import Companyimg from './utils/Companyimg';
 import MoreButton from './utils/MoreButton';
 import { properties } from '../properties.js';
+import Box from '@mui/material/Box';
 
 const Resumebar = () => {
   return (
-    <div className="App-resume" id="experienceBar">
+    <Box
+      className="App-resume"
+      id="experienceBar"
+      sx={{ backgroundColor: 'secondary.main' }}
+    >
       <Typography
         variant="h5"
         sx={{
@@ -19,7 +24,7 @@ const Resumebar = () => {
           marginBottom: '20px',
           fontFamily: 'roboto',
         }}
-        color="#40a829"
+        color="primary.main"
         gutterBottom
       >
         Work Experience
@@ -31,7 +36,7 @@ const Resumebar = () => {
           fontSize: '20px',
           marginBottom: '100px',
         }}
-        color="limegreen"
+        color="primary.main"
         gutterBottom
       >
         I have had the opportunity to work at these amazing companies so far.
@@ -56,7 +61,7 @@ const Resumebar = () => {
       </Stack>
 
       <MoreButton link={properties.resumeLink} title={'Download my resume'} />
-    </div>
+    </Box>
   );
 };
 

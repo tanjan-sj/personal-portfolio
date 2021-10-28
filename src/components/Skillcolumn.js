@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,12 +9,14 @@ import About from './utils/About';
 import Listbutton from './utils/Listbutton';
 import TechItem from './utils/TechItem';
 import ResearchItem from './utils/ResearchItem';
+import IconButton from '@mui/material/IconButton';
 
 const Skillcolumn = ({ title, about, icon, seeTheList, items, isResearch }) => {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
 
   const handleClick = () => {
     setOpen(!open);
+    console.log('open: ', open);
   };
 
   var rows = [];
@@ -36,23 +38,28 @@ const Skillcolumn = ({ title, about, icon, seeTheList, items, isResearch }) => {
       sx={{
         minWidth: '50%',
         borderRadius: '5px',
-        border: '0.5px solid lime',
+        border: '0.5px solid secondary.lighter',
         boxShadow: 5,
+        textAlign: 'center',
+        marginTop: '100px',
       }}
     >
       <CardContent>
         <span className="icon-style">
-          <FontAwesomeIcon
-            icon={icon}
-            size="lg"
-            color="lime"
-            pull="right"
-            textAlign="center"
-            style={{
-              marginLeft: '215px',
-            }}
-          />
+          <IconButton sx={{ color: 'secondary.lighter' }}>
+            <FontAwesomeIcon
+              icon={icon}
+              size="2x"
+              pull="right"
+              textAlign="center"
+            />
+          </IconButton>
         </span>
+        {/* <span className="icon-style">
+          <IconButton color="secondary">
+            <FontAwesomeIcon icon={icon} size="2x" color="primary" />
+          </IconButton>
+        </span> */}
 
         <PrimaryTitle title={title} />
         <About about={about} />
@@ -72,7 +79,11 @@ const Skillcolumn = ({ title, about, icon, seeTheList, items, isResearch }) => {
             handleClick={handleClick}
           />
           <Collapse in={open} timeout="auto" unmountOnExit>
-            <List component="div" disablePadding>
+            <List
+              component="div"
+              disablePadding
+              sx={{ color: 'secondary.lighter' }}
+            >
               {rows}
             </List>
           </Collapse>

@@ -1,10 +1,15 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import { properties } from '../properties.js';
+import Box from '@mui/material/Box';
 
 const Contactme = () => {
   return (
-    <div className="App-contact" id="contactBar">
+    <Box
+      className="App-contact"
+      id="contactBar"
+      sx={{ backgroundColor: 'primary.main' }}
+    >
       {' '}
       <Typography
         variant="h5"
@@ -15,7 +20,7 @@ const Contactme = () => {
           marginBottom: '20px',
           fontFamily: 'roboto',
         }}
-        color="white"
+        color="secondary.lighter"
         gutterBottom
       >
         Contact Me at
@@ -27,7 +32,7 @@ const Contactme = () => {
           fontSize: '20px',
           marginBottom: '70px',
         }}
-        color="snow"
+        color="secondary.lighter"
         gutterBottom
       >
         {properties.mailId}
@@ -39,12 +44,12 @@ const Contactme = () => {
           fontSize: '15px',
           marginBottom: '100px',
         }}
-        color="snow"
+        color="secondary.lighter"
         gutterBottom
       >
         Third party logos are registered trademark of the respective companies.
       </Typography>
-    </div>
+    </Box>
   );
 };
 

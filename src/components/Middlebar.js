@@ -1,11 +1,13 @@
 import React from 'react';
 import hero from '../resources/hero.svg';
+import Box from '@mui/material/Box';
+
 
 const Middlebar = () => {
   return (
-    <div className="App-middle">
+    <Box className="App-middle" sx={{ backgroundColor: 'primary.main' }}>
       <img src={hero} alt="mid photo" />
-    </div>
+    </Box>
   );
 };
 

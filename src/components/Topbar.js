@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useTheme } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
+import CustomTheme from '../theme/CustomTheme';
+import { ThemeProvider } from '@mui/material';
+
 import {
   faResearchgate,
   faGithub,
@@ -18,19 +21,22 @@ import { properties } from '../properties.js';
 
 export const Topbar = () => {
   return (
-    <Box color="primary" sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar
         position="static"
         style={{
-          background: 'snow',
+          // backgroundColor: 'background.paper',
+          // background: 'snow',
           height: '100px',
         }}
+        color="primary"
       >
         <Toolbar>
           <Stack
             spacing={3}
             direction="row"
-            padding="20px"
+            paddingTop="20px"
+            paddingBottom="20px"
             justify="space-between"
           >
             <ProfileButton
@@ -60,7 +66,10 @@ export const Topbar = () => {
             />
           </Stack>
 
-          <Divider className="divider-top" />
+          <Divider
+            className="divider-top"
+            style={{ backgroundColor: 'secondary' }}
+          />
 
           <TabButton id={'introBar'} tag={'About Me'} />
           <TabButton id={'skillBar'} tag={'Skill'} />

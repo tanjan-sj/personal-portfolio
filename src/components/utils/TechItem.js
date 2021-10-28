@@ -11,7 +11,7 @@ const TechItem = ({ techName }) => {
           sx={{
             fontSize: '18px',
             textAlign: 'center',
-            color: 'DarkSlateGrey',
+            color: 'secondary.lighter',
             paddingRight: '20px',
           }}
         >

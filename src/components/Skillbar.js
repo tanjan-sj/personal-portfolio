@@ -9,8 +9,19 @@ import { properties } from '../properties.js';
 
 const Skillbar = () => {
   return (
-    <div className="App-skill" id="skillBar">
-      <Box sx={{ width: '60%', flexGrow: 1, marginBottom: '150px' }}>
+    <Box
+      className="App-skill"
+      id="skillBar"
+      sx={{ width: '100%', backgroundColor: 'primary.main' }}
+    >
+      <Box
+        sx={{
+          width: '60%',
+          flexGrow: 1,
+          marginBottom: '150px',
+          color: 'secondary',
+        }}
+      >
         <Grid container spacing={0}>
           <Grid item xs={6}>
             <Skillcolumn
@@ -35,7 +46,7 @@ const Skillbar = () => {
         </Grid>
       </Box>
       <Divider className="divider" />
-    </div>
+    </Box>
   );
 };
 

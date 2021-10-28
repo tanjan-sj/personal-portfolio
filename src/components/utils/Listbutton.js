@@ -4,6 +4,8 @@ import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
+import { Icon } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 
 const Listbutton = ({ open, title, handleClick }) => {
   return (
@@ -15,7 +17,7 @@ const Listbutton = ({ open, title, handleClick }) => {
             sx={{
               fontSize: '20px',
               textAlign: 'center',
-              color: 'limegreen',
+              color: 'secondary.lighter',
               fontWeight: 'bold',
             }}
           >
@@ -23,7 +25,14 @@ const Listbutton = ({ open, title, handleClick }) => {
           </Typography>
         }
       />
-      {{ open } ? <ExpandLess /> : <ExpandMore />}
+      {{ open } ? (
+        <ExpandLess fontSize="large" sx={{ color: 'secondary.lighter' }} />
+      ) : (
+        <ExpandMore fontSize="large" sx={{ color: 'secondary.lighter' }} />
+      )}
+      {/* {{ open }
+        ? console.log('open true: ', open)
+        : console.log('open false: ', open)} */}
     </ListItemButton>
   );
 };

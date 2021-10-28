@@ -17,9 +17,9 @@ const ResearchItem = ({ researchName, researchLink }) => {
             sx={{
               fontSize: '18px',
               textAlign: 'center',
-              color: 'DarkSlateGrey',
+              // color: 'DarkSlateGrey',
               paddingRight: '20px',
-              color: 'steelblue',
+              color: 'secondary.linkColor',
             }}
           >
             {researchName}
