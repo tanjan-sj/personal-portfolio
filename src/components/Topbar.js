@@ -1,11 +1,9 @@
-import React, { useTheme } from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
-import CustomTheme from '../theme/CustomTheme';
-import { ThemeProvider } from '@mui/material';
 
 import {
   faResearchgate,
@@ -21,12 +19,10 @@ import { properties } from '../properties.js';
 
 export const Topbar = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} id="topBar">
       <AppBar
         position="static"
         style={{
-          // backgroundColor: 'background.paper',
-          // background: 'snow',
           height: '100px',
         }}
         color="primary"

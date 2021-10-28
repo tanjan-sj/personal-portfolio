@@ -14,7 +14,7 @@ const Resumebar = () => {
     <Box
       className="App-resume"
       id="experienceBar"
-      sx={{ backgroundColor: 'secondary.main' }}
+      sx={{ backgroundColor: 'secondary.lighter' }}
     >
       <Typography
         variant="h5"
