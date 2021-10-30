@@ -28,17 +28,17 @@ const Skillbar = () => {
               title={properties.skillTitle1}
               icon={faCode}
               about={properties.skillAbout1}
-              seeTheList={properties.skillTitle1}
+              seeTheList={properties.listTitle1}
               items={properties.devArray}
               isResearch={false}
             />
           </Grid>
           <Grid item xs={6}>
             <Skillcolumn
-              title={properties.skillTitle1}
+              title={properties.skillTitle2}
               icon={faNetworkWired}
               about={properties.skillAbout2}
-              seeTheList={properties.skillTitle2}
+              seeTheList={properties.listTitle2}
               items={properties.researchArray}
               isResearch={true}
             />

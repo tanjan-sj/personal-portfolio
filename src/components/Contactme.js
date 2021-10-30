@@ -13,7 +13,7 @@ const Contactme = () => {
     <Box
       className="App-contact"
       id="contactBar"
-      sx={{ backgroundColor: 'primary.main' }}
+      sx={{ backgroundColor: 'primary.main', display: 'flex' }}
     >
       {' '}
       <Typography
@@ -54,18 +54,27 @@ const Contactme = () => {
       >
         Third party logos are registered trademark of the respective companies.
       </Typography>
-      <Button
-        variant="contained"
+      <IconButton
+        variant="outlined"
         onClick={() => {
           const element = document.getElementById('topBar');
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }}
+        size="large"
         sx={{
           color: 'secondary.lighter',
+          backgroundColor: 'secondary.main',
+          justifyContent: 'flex-end',
+          textAlign: 'right',
+          float: 'right',
+          marginLeft: '1600px',
+          fontSize: '50px',
+          marginBottom: '20px',
+          // borderRadius: '28px',
         }}
       >
         <KeyboardArrowUpIcon />
-      </Button>
+      </IconButton>
     </Box>
   );
 };
