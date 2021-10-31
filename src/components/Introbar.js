@@ -29,8 +29,8 @@ const Introbar = () => {
         engineering, designing scalable system, and of course - adapting to new
         technologies right away! I learn from my failures and that's where my
         interest in research comes from. */}
-        {properties.introParagraph}
-        {/* In a childhood filled with world classics and fictions, I was intrigued
+        {/* {properties.introParagraph} */}
+        In a childhood filled with world classics and fictions, I was intrigued
         when I finally got my hands on a scifi novelette I still treasure - The
         Bicentennial Man by Isaac Asimov. <br />
         Children want to be a lot of things when they grow up, and I was no
@@ -41,7 +41,7 @@ const Introbar = () => {
         fiction in science truly takes place. <br />
         From making simplistic robots in my undergrad years to building industry
         grade applications in my current professional career, I aspire to make a
-        dent in the technology sphere with my research and creativity. */}
+        dent in the technology sphere with my research and creativity.
       </p>
     </Box>
   );
