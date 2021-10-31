@@ -45,11 +45,11 @@ export const Topbar = () => {
               link={properties.githubLink}
               icon={faGithub}
             />
-            <ProfileButton
+            {/* <ProfileButton
               label={'Gitlab.com'}
               link={properties.gitlabLink}
               icon={faGitlab}
-            />
+            /> */}
             <ProfileButton
               label={'Researchgate.com'}
               link={properties.researchgateLink}
