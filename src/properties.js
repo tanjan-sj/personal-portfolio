@@ -84,6 +84,6 @@ export const properties = {
   visitMsg2: 'Visit bkash',
   visitMsg3: 'Visit DSi',
   resumeLink:
-    'https://drive.google.com/uc?export=download&id=14QFeu1lnY_cbWrArhQPSW4Irtu6JcYKh',
+    'https://drive.google.com/uc?export=download&id=1TlQSSjFSCTinIZmJHQPv9-XMSme4k78a',
   mailId: 'tanjan.sj@gmail.com',
 };
